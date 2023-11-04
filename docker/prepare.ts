@@ -8,10 +8,7 @@ async function prepare(rootDir: string) {
     {
       name: 'add-user',
       options: {} as any,
-    },
-    {
-      name: 'yyt'
-    },
+    }
   ]
 
   // 写入默认配置文件
