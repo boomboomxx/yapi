@@ -10,9 +10,9 @@ async function prepare(rootDir: string) {
       options: {} as any,
     },
     {
-      name:'ytt',
+      name: 'yyt',
       options: {} as any,
-    }
+    },
   ]
 
   // 写入默认配置文件
