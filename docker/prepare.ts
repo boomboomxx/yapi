@@ -10,8 +10,7 @@ async function prepare(rootDir: string) {
       options: {} as any,
     },
     {
-      name: 'yyt',
-      options: {} as any,
+      name: 'yyt'
     },
   ]
 
