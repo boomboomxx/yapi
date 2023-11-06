@@ -40,6 +40,7 @@ async function handle(
           let data = {
             name: cat.name,
             project_id: projectId,
+            parent_id : cat.parent_id ? cat.parent_id : 0,
             desc: cat.desc,
             token
           };

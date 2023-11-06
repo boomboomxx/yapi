@@ -927,6 +927,7 @@ class interfaceController extends baseController {
       params = yapi.commons.handleParams(params, {
         name: 'string',
         project_id: 'number',
+        parent_id: 'number',
         desc: 'string'
       });
 
@@ -943,7 +944,10 @@ class interfaceController extends baseController {
       if (!params.name) {
         return (ctx.body = yapi.commons.resReturn(null, 400, '名称不能为空'));
       }
-
+      let count = await this.catModel.checkRepeatWithParentId(params.name, params.parent_id)
+      if (count > 0) {
+        return ctx.body = yapi.commons.resReturn(null, 402, '名称重复');
+      }
       let result = await this.catModel.save({
         name: params.name,
         project_id: params.project_id,

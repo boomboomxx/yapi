@@ -44,3 +44,5 @@ runtime/
 client/plugin-module.js
 .vscode
 /iconfont
+*.lock
+*lock.json

@@ -52,6 +52,13 @@ class interfaceCat extends baseModel {
     });
   }
 
+  checkRepeatWithParentId(name, parent_id=0) {
+    return this.model.countDocuments({
+      name: name,
+      parent_id: parent_id
+    });
+  }
+
   list(project_id) {
     return this.model
       .find({
