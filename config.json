@@ -13,7 +13,7 @@
   "db": {
     "servername": "192.168.101.134",
     "port": 8860,
-    "DATABASE": "yapi-xx",
+    "DATABASE": "yapi",
     "user": "szis",
     "pass": "szis@12345",
     "authSource": "admin"
