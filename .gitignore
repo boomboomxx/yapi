@@ -1,4 +1,4 @@
-﻿# kdiff3 ignore
+# kdiff3 ignore
 *.orig
 
 # maven ignore
@@ -46,3 +46,4 @@ client/plugin-module.js
 /iconfont
 *.lock
 *lock.json
+*config.json
