@@ -17,8 +17,24 @@
   - 支持多级`目录搜索`
 
 ---
+### 二次开发
+#### 前置
+- nodejs
+- mongoDB
 
+#### 步骤
+1. 创建文件夹 `vendors`
+2. 进入 `vendors` 文件夹，
+3. 克隆本项目到 `vendors` 文件夹，命名为 `yapi`
+  * `git clone --branch master --depth 1 http://git.szistech.com/devops/yapi.git .`
+3. 复制 `yapi/config_example.json` 为 `./config.json`
+4. 进入 `yapi` 目录
+  * 执行 `yarn` 或 `npm install` 命令
+  * 执行 `yarn install-server` 初始化数据库，**此步骤可在有数据库的时候跳过**
+  * 开2个命令行窗口/session，分别执行命令 `yarn dev-server` 和 `yarn dev-client` 分别运行 server 和 client
+5. 修改代码实时查看
 
+---
 ### 内网部署
   - 需要事先安装 nodejs，mongodb  
   - 这里采用不同安装，部署的方式，大体上步骤和官方一样 

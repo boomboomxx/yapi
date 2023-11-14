@@ -2,7 +2,7 @@ import React, { PureComponent as Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import { Table, Button, Modal, message, Tooltip, Select, Icon } from 'antd';
+import { Table, Button, Modal, message, Tooltip, Select, Icon, Cascader } from 'antd';
 import AddInterfaceForm from './AddInterfaceForm';
 import {
   fetchInterfaceListMenu,
@@ -199,12 +199,17 @@ class InterfaceList extends Component {
   //   }
   // };
 
+
   render() {
     let tag = this.props.curProject.tag;
     let tagFilter = tag.map(item => {
-      return {text: item.name, value: item.name};
+      return { text: item.name, value: item.name };
     });
-
+    // 找到级联的默认值
+    const findParentArr = (value) => {
+      const res = this.props.catList.filter(c => c._id == value).map(v => v.ids)
+      return res[0]
+    }
     const columns = [
       {
         title: '接口名称',
@@ -254,19 +259,11 @@ class InterfaceList extends Component {
         width: 28,
         render: (item, record) => {
           return (
-            <Select
-              value={item + ''}
-              className="select path"
-              onChange={catid => this.changeInterfaceCat(record._id, catid)}
-            >
-              {this.props.catList.map(cat => {
-                return (
-                  <Option key={cat.id + ''} value={cat._id + ''}>
-                    <span>{cat.name}</span>
-                  </Option>
-                );
-              })}
-            </Select>
+            <Cascader
+              defaultValue={findParentArr(record.catid)}
+              options={this.props.currProjectTree}
+              onChange={catid => this.changeInterfaceCat(record._id, catid[catid.length - 1])}
+            />
           );
         }
       },
@@ -361,7 +358,6 @@ class InterfaceList extends Component {
 
     const isDisabled = this.props.catList.length === 0;
 
-    // console.log(this.props.curProject.tag)
 
     return (
       <div style={{ padding: '24px' }}>
