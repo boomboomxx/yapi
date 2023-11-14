@@ -19,7 +19,7 @@
 ---
 ### 二次开发
 #### 前置
-- nodejs
+- nodejs(v10.24.1), 建议用 `nvm` 进行管理
 - mongoDB
 
 #### 步骤
@@ -39,7 +39,7 @@
   - 需要事先安装 nodejs，mongodb  
   - 这里采用不同安装，部署的方式，大体上步骤和官方一样 
 
-> config.json里面的内容，具体看官方
+> config.json里面的内容，具体看官方 [config_example](https://github.com/yapi-pro/yapi/blob/master/config_example.json)
 
 ```shell
 #复制完成后请修改相关配置
