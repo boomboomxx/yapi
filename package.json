@@ -12,7 +12,7 @@
     "start": " node server/app.js",
     "test": "ava",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "build-client": "NODE_ENV=production ykit pack -m",
+    "build-client": "cross-env NODE_ENV=production ykit pack -m",
     "npm-publish": "node ./npm-publish.js",
     "docs": "ydoc build"
   },
@@ -37,6 +37,7 @@
     "compare-versions": "^3.4.0",
     "copy-to-clipboard": "3.0.8",
     "cpu-load": "^1.0.0",
+    "cross-env": "^7.0.3",
     "crypto-js": "^3.1.9-1",
     "deep-extend": "^0.5.0",
     "deref": "^0.7.3",

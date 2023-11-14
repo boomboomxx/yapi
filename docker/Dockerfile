@@ -28,6 +28,7 @@ RUN git clone \
   && yarn \
   && node /yapi/scripts/clean.js $(pwd) \
   && yarn install --production \
+  && yarn build-client \
   && node /yapi/scripts/clean.js $(pwd) \
   && rm -rf /yapi/scripts
 
