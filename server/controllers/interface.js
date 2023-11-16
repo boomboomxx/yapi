@@ -944,7 +944,7 @@ class interfaceController extends baseController {
       if (!params.name) {
         return (ctx.body = yapi.commons.resReturn(null, 400, '名称不能为空'));
       }
-      let count = await this.catModel.checkRepeatWithParentId(params.name, params.parent_id)
+      let count = await this.catModel.checkRepeatWithParentId(params.project_id,params.name, params.parent_id)
       if (count > 0) {
         return ctx.body = yapi.commons.resReturn(null, 402, '名称重复');
       }
