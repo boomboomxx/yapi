@@ -41,6 +41,7 @@
 
 > config.json里面的内容，具体看官方 [config_example](https://github.com/yapi-pro/yapi/blob/master/config_example.json)
 
+
 ```shell
 #复制完成后请修改相关配置
 cp vendors/config_example.json ./config.json 

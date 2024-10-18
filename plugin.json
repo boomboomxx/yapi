@@ -8,5 +8,10 @@
      "title": "yapi-plugin-import-openapi",
      "url": "https://github.com/yuu2lee4/yapi-plugin-import-openapi",
      "desc": "openapi导入插件(仅支持3.0)"
+  },
+  {
+   "title": "yapi-plugin-export-docx-data",
+   "url": "https://github.com/inceptiongt/Yapi-plugin-export-docx-data",
+   "desc": "YAPI导出word文件插件"
   }
 ]

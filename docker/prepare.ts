@@ -8,6 +8,10 @@ async function prepare(rootDir: string) {
     {
       name: 'add-user',
       options: {} as any,
+    },
+    {
+      name: 'export-docx-data',
+      options: {} as any,
     }
   ]
 
